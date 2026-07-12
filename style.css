@@ -374,6 +374,7 @@ footer {
     letter-spacing: 0.5px;
 }
 
+/* All footer links base color set to Buzz Gold */
 .footer-row a {
     color: var(--buzz-gold);
     text-decoration: none;
@@ -381,14 +382,9 @@ footer {
     transition: color 0.2s ease;
 }
 
-/* Style social icons distinctively with white */
-.footer-row a[target="_blank"] {
+/* Uniform hover effect for all links */
+.footer-row a:hover {
     color: var(--text-light);
-}
-
-.footer-row a:hover,
-.footer-row a[target="_blank"]:hover {
-    color: var(--buzz-gold);
 }
 
 .footer-divider {
