@@ -499,6 +499,10 @@ footer {
     .hero-content h1 {
         font-size: 2.8rem;
     }
+.profile-container {
+        grid-template-columns: 1fr; /* Stacks everything into one single column */
+        gap: 40px;
+    }
 }
 
 @media (max-width: 768px) {
