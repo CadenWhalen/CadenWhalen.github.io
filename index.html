@@ -3,101 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECE Student ePortfolio</title>
+    <title>Professional ePortfolio | Electrical & Computer Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">ECE ePortfolio</div>
+        <div class="logo">Portfolio<span class="gold-accent">.</span></div>
         <nav>
-            <a href="#welcome">Home</a>
-            <a href="#about">About Me</a>
+            <a href="#welcome">Executive Summary</a>
+            <a href="#about">Biography</a>
             <a href="#resume">Resume</a>
-            <a href="#goals">Career Goals</a>
-            <a href="#projects">Projects</a>
+            <a href="#goals">Career Strategy</a>
+            <a href="#projects">Technical Portfolio</a>
         </nav>
     </header>
 
     <section id="welcome" class="hero">
         <div class="hero-content">
-            <h1>Welcome to my Professional ePortfolio</h1>
-            <p>Driven by innovation, engineering excellence, and a passion for solving real-world electrical and computer engineering challenges. Explore my journey, technical roadmap, and core projects below.</p>
+            <span class="subtitle">Electrical & Computer Engineering</span>
+            <h1>Engineering Scalable Solutions <br><span class="italic-text">for Complex Systems</span></h1>
+            <p>A comprehensive professional repository capturing academic milestones, technical roadmaps, and core engineering competencies developed through foundational discovery projects.</p>
+            <a href="#about" class="btn-primary">Explore Portfolio</a>
         </div>
     </section>
 
     <section id="about" class="container">
-        <h2>About Me</h2>
+        <div class="section-header">
+            <span class="section-tag">01 // Background</span>
+            <h2>Biography & About Me</h2>
+        </div>
         <div class="about-grid">
             <div class="about-text">
-                <p>Hello! I am an Electrical/Computer Engineering student dedicated to building the future of technology. My journey began with a deep curiosity about how hardware and software integrate to power our daily lives, which led me to pursue my degree and dive headfirst into hands-on engineering challenges.</p>
-                <p>Leveraging my background in problem-solving and systematic design, I thrive in collaborative environments that push the boundaries of what is possible. My elevator pitch is simple: I build resilient systems and software frameworks that optimize performance, improve accessibility, and create tangible impacts for users worldwide.</p>
+                <p class="lead-text">Driven by systemic problem-solving and the seamless integration of hardware architecture with optimized software frameworks.</p>
+                <p>As an ECE student, my academic path centers on unlocking efficiency within complex systems. Moving past foundational engineering theory, I focus on applying empirical methodologies to tangible infrastructure. My background bridges the divide between meticulous hardware validation and rapid application deployment.</p>
+                <p>Leveraging key insights from story-driven interviewing concepts, I approach engineering not just as code or circuitry, but as a strategic asset designed to solve real-world organizational bottlenecks. I thrive in highly cross-functional settings that challenge conventional technical design parameters.</p>
             </div>
-            <div class="about-img-box">
-                <img src="https://via.placeholder.com/300x300" alt="Professional Headshot" class="portfolio-img">
+            <div class="about-img-container">
+                <div class="image-frame">
+                    <img src="https://via.placeholder.com/400x450" alt="Professional Headshot" class="portfolio-img">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="resume" class="bg-light">
+    <section id="resume" class="bg-alt">
         <div class="container text-center">
-            <h2>Resume</h2>
-            <p>View my interactive single-page layout below, or download a comprehensive PDF copy for your records.</p>
+            <div class="section-header">
+                <span class="section-tag">02 // Credentials</span>
+                <h2>Curriculum Vitae</h2>
+            </div>
+            <p class="max-width-text">Review my professional competencies, technical toolsets, and academic history below. You can also download a hard copy optimized for applicant tracking systems.</p>
             
-            <a href="#" class="btn" download>Download PDF Resume</a>
+            <a href="#" class="btn-secondary" download>Download PDF Resume</a>
             
-            <div class="resume-preview">
-                <iframe src="https://via.placeholder.com/800x600?text=Your+PDF+Resume+Embed+Here" width="100%" height="600px"></iframe>
+            <div class="resume-wrapper">
+                <iframe src="https://via.placeholder.com/1000x600?text=Interactive+PDF+Resume+Viewport" class="resume-frame"></iframe>
             </div>
         </div>
     </section>
 
     <section id="goals" class="container">
-        <h2>Career Goals & ECE Roadmap</h2>
-        <p>My career vision focuses on bridging theoretical academic fundamentals with practical, industrial applications. As outlined in my strategic ECE Roadmap, my goals are split into structured phases:</p>
+        <div class="section-header">
+            <span class="section-tag">03 // Vision</span>
+            <h2>Strategic Roadmap & Goals</h2>
+        </div>
+        <p class="max-width-text">A targeted projection of my timeline within the engineering sector, delineating short-term operational targets and long-term industrial vision.</p>
         
         <div class="goals-grid">
-            <div class="card">
-                <h3>Short-Term Goals</h3>
-                <p>Secure specialized internship opportunities in hardware validation or embedded software development. Master core engineering toolkits, circuit analysis software, and low-level programming languages while maintaining academic rigor.</p>
+            <div class="premium-card">
+                <div class="card-num">01</div>
+                <h3>Short-Term Milestones</h3>
+                <p>Secure a core role within hardware validation or embedded software architecture teams. My focus centers on mastering industry-standard hardware description languages (HDLs), refining automated simulation pipelines, and contributing directly to scalable firmware environments while maintaining top-tier academic standing.</p>
             </div>
-            <div class="card">
+            <div class="premium-card">
+                <div class="card-num">02</div>
                 <h3>Long-Term Aspirations</h3>
-                <p>Step into a senior systems engineering or technical project lead role. I aim to head architectural design teams crafting smart grids, autonomous vehicles, or consumer electronics while pursuing professional engineering licensure.</p>
+                <p>Transition into a Principal Systems Architect role, overseeing cross-functional engineering engineering divisions. I aim to spearhead the structural implementation of resilient autonomous infrastructure or next-generation compute paradigms, while cementing technical leadership and pursuing professional engineering credentials.</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="bg-light">
+    <section id="projects" class="bg-alt">
         <div class="container">
-            <h2>Technical Project Portfolio</h2>
-            <p>The heart of my engineering work. This repository scales dynamically as I complete advanced laboratory modules and design tracks.</p>
+            <div class="section-header">
+                <span class="section-tag">04 // Engineering</span>
+                <h2>Technical Projects Portfolio</h2>
+            </div>
+            <p class="max-width-text">A scalable archive documenting practical engineering executions, circuit configurations, and validation methodologies.</p>
 
-            <div class="project-card">
-                <h3>Featured: Individual Discovery Project</h3>
-                <div class="project-meta">Status: In Progress (Completing for Showcase)</div>
-                <p><strong>Overview:</strong> This comprehensive technical design exploration aims to address major systemic gaps using embedded architectures and data modeling. (Expand this section to hit your ~500-word overview, detailing your system design requirements, architectural layout, and methodology).</p>
-                
-                <div class="project-gallery">
-                    <img src="https://via.placeholder.com/400x250?text=Discovery+Project+Design" alt="Project Block Diagram">
-                    <img src="https://via.placeholder.com/400x250?text=Discovery+Project+Data" alt="Project Execution Waveform">
+            <div class="showcase-card">
+                <div class="showcase-content">
+                    <span class="project-badge">Featured System Design</span>
+                    <h3>Individual Discovery Project</h3>
+                    <p class="project-status">Current Status: Active Research Phase (Showcase Preparation)</p>
+                    <p>This core technical architecture maps direct technical indicators against systemic environmental configurations. By blending robust embedded modules alongside rigorous filtering layouts, the architecture addresses deep instrumentation vulnerabilities.</p>
+                    <p><em>Note: Extended technical documentation (~500 words minimum), block diagram schematics, system calculations, and full analytical verification profiles are continuously integrated here as final system validation wraps up.</em></p>
+                </div>
+                <div class="showcase-gallery">
+                    <img src="https://via.placeholder.com/500x300?text=System+Architecture+Block+Diagram" alt="System Block Diagram Layout">
+                    <img src="https://via.placeholder.com/500x300?text=Signal+Processing+Validation+Plot" alt="Signal Processing Metrics">
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>Project 2: Academic Design Lab</h3>
-                <p><strong>Overview:</strong> Brief summary of your secondary academic design lab. Documenting the code base, testing frameworks, and hardware parameters evaluated during the semester.</p>
-                <div class="project-gallery">
-                    <img src="https://via.placeholder.com/400x250?text=Lab+Setup" alt="Lab Test Setup">
+            <div class="showcase-card mt-4">
+                <div class="showcase-content">
+                    <span class="project-badge">Laboratory Module</span>
+                    <h3>Autonomous Robotics Navigation Stack</h3>
+                    <p>Development and deployment of sensor fusion architectures for precision telemetry in constrained navigation spaces. Features detailed filtering models and low-latency signal configurations.</p>
+                </div>
+                <div class="showcase-gallery">
+                    <img src="https://via.placeholder.com/500x300?text=Telemetry+Mapping+Data" alt="Telemetry Plot">
                 </div>
             </div>
+
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 ECE Student ePortfolio. Created for the Culminating Semester Assignment.</p>
-        <div class="socials">
-            <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Contact</a>
+        <div class="footer-container">
+            <p>&copy; 2026 Professional ePortfolio. Designed to ECE Institutional Guidelines.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Technical Network</a>
+                <a href="#">Contact Office</a>
+            </div>
         </div>
     </footer>
 
