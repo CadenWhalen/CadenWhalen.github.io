@@ -400,3 +400,8 @@ footer {
         margin: 0 10px;
     }
 }
+nav a.active {
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 4px;
+}
