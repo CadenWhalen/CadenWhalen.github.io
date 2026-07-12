@@ -1,16 +1,17 @@
-/* Custom Global Variables for Editorial/Corporate Palette */
+/* Custom Global Variables - Official Georgia Tech Palette */
 :root {
-    --primary-color: #0f172a;    /* Premium Rich Deep Slate */
-    --secondary-color: #1e293b;  /* Subtle Slate Variant */
-    --accent-gold: #c5a880;      /* Champagne Gold Accent */
-    --text-dark: #334155;        /* Muted Charcoal Text */
-    --text-light: #f8fafc;       /* Ultra Off-White */
+    --primary-color: #003057;    /* Official GT Tech Navy */
+    --secondary-color: #1b365d;  /* Deep Navy Variant */
+    --accent-gold: #B3A369;      /* Official GT Tech Gold */
+    --buzz-gold: #EAAA00;        /* Official GT Buzz Gold (High Highlight Accent) */
+    --text-dark: #222222;        /* High-contrast dark text */
+    --text-light: #ffffff;       
     --bg-light: #ffffff;
-    --bg-alt: #f1f5f9;           /* Clean Tech Grey */
-    --border-subtle: #e2e8f0;
+    --bg-alt: #f4f5f7;           /* Clean Tech Grey */
+    --border-subtle: #dddddd;
 }
 
-/* Base Configuration */
+/* Base Configuration & Resets */
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +27,9 @@ body {
     font-size: 1rem;
 }
 
-/* Premium Sticky Header Typography & Styling */
+/* Premium Sticky Header Styling */
 header {
-    background-color: rgba(15, 23, 42, 0.96);
+    background-color: rgba(0, 48, 87, 0.98); /* Solid GT Navy baseline */
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
@@ -37,7 +38,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 2px solid var(--accent-gold);
 }
 
 header .logo {
@@ -49,11 +50,11 @@ header .logo {
 }
 
 header .gold-accent {
-    color: var(--accent-gold);
+    color: var(--buzz-gold);
 }
 
 nav a {
-    color: #94a3b8;
+    color: #cbd5e1;
     text-decoration: none;
     margin-left: 28px;
     font-size: 0.9rem;
@@ -64,10 +65,16 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-gold);
+    color: var(--buzz-gold);
 }
 
-/* Layout Padding Adjustments */
+nav a.active {
+    color: var(--buzz-gold);
+    border-bottom: 2px solid var(--buzz-gold);
+    padding-bottom: 4px;
+}
+
+/* Layout Padding & Structures */
 .container {
     padding: 7rem 8%;
 }
@@ -132,10 +139,10 @@ p {
     font-weight: 400;
 }
 
-/* Premium Minimalist Hero Module */
+/* Premium Hero Module */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #020617 100%);
-    min-height: 85vh;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #011627 100%);
+    min-height: 80vh;
     display: flex;
     align-items: center;
     padding: 0 8%;
@@ -150,7 +157,7 @@ p {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--accent-gold);
+    color: var(--buzz-gold);
     font-weight: 600;
     display: block;
     margin-bottom: 1.5rem;
@@ -169,7 +176,7 @@ p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    color: #cbd5e1;
+    color: #e2e8f0;
 }
 
 .hero-content p {
@@ -179,10 +186,10 @@ p {
     margin-bottom: 2.5rem;
 }
 
-/* Buttons Styling */
+/* Premium Buttons Styling */
 .btn-primary {
     display: inline-block;
-    background-color: var(--accent-gold);
+    background-color: var(--buzz-gold);
     color: var(--primary-color);
     padding: 14px 30px;
     text-decoration: none;
@@ -193,18 +200,18 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #d9c3a3;
+    background-color: #ffd15c;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     display: inline-block;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     padding: 12px 28px;
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
     margin-bottom: 2.5rem;
@@ -236,7 +243,7 @@ p {
     left: -8px;
     right: -8px;
     bottom: -8px;
-    border: 1px solid var(--accent-gold);
+    border: 2px solid var(--accent-gold);
     pointer-events: none;
     opacity: 0.5;
 }
@@ -244,10 +251,9 @@ p {
 .portfolio-img {
     width: 100%;
     display: block;
-    filter: grayscale(15%);
 }
 
-/* Executive Interactive Document Container */
+/* Interactive Document Container */
 .resume-wrapper {
     margin-top: 1rem;
     border: 1px solid var(--border-subtle);
@@ -273,6 +279,7 @@ p {
     background: var(--bg-light);
     padding: 3rem;
     border: 1px solid var(--border-subtle);
+    border-top: 4px solid var(--primary-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     position: relative;
     transition: transform 0.3s ease;
@@ -280,19 +287,20 @@ p {
 
 .premium-card:hover {
     transform: translateY(-5px);
+    border-top-color: var(--buzz-gold);
 }
 
 .premium-card .card-num {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    color: rgba(197, 168, 128, 0.25);
+    color: rgba(179, 163, 105, 0.2);
     position: absolute;
     top: 1.5rem;
     right: 2.5rem;
     font-weight: 600;
 }
 
-/* Technical Showcases (Highly Scalable) */
+/* Technical Showcases */
 .showcase-card {
     background: var(--bg-light);
     border: 1px solid var(--border-subtle);
@@ -339,32 +347,43 @@ p {
     border: 1px solid var(--border-subtle);
 }
 
-/* Modern Corporate Footer */
+/* Updated GT Institutional Footer Styling */
 footer {
     background-color: var(--primary-color);
-    color: #94a3b8;
-    padding: 4rem 8%;
-    font-size: 0.9rem;
+    color: #cbd5e1;
+    padding: 3rem 8%;
+    font-size: 0.95rem;
+    border-top: 3px solid var(--accent-gold);
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.gt-footer-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.15));
 }
 
 .footer-links a {
     color: var(--text-light);
     text-decoration: none;
-    margin-left: 25px;
+    font-weight: 500;
+    margin: 0 5px;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: var(--accent-gold);
+    color: var(--buzz-gold);
 }
 
-/* Ultra Responsive Configurations */
+/* Responsive Scaling Layouts */
 @media (max-width: 1024px) {
     .about-grid, .goals-grid {
         grid-template-columns: 1fr;
@@ -391,17 +410,4 @@ footer {
     .container {
         padding: 4rem 5%;
     }
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .footer-links a {
-        margin: 0 10px;
-    }
-}
-nav a.active {
-    color: var(--accent-gold);
-    border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 4px;
 }
