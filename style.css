@@ -411,3 +411,19 @@ footer {
         padding: 4rem 5%;
     }
 }
+.footer-contact {
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact a {
+    color: var(--buzz-gold);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--text-light);
+}
