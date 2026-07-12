@@ -277,35 +277,58 @@ p {
     color: var(--text-light);
 }
 
-/* About Grid Layout */
-.about-grid {
+/* --- Engineering Profile Section --- */
+.profile-section {
+    padding: 5rem 8%;
+    background-color: #ffffff; 
+}
+
+.profile-container {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 70px;
-    align-items: center;
+    /* This creates a 60/40 split between text and images */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
 }
 
-.image-frame {
-    position: relative;
-    padding: 15px;
-    border: 1px solid var(--border-subtle);
+/* Typography for the Text Column */
+.profile-text h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color); 
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
 }
 
-.image-frame::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border: 2px solid var(--accent-gold);
-    pointer-events: none;
-    opacity: 0.5;
+.profile-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.75rem;
 }
 
-.portfolio-img {
+/* Styling for the 3 Stacked Images */
+.profile-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between the stacked images */
+}
+
+.profile-img {
     width: 100%;
-    display: block;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Soft professional shadow */
+    border: 1px solid #e2e8f0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Slight zoom effect when you hover over the images */
+.profile-img:hover {
+    transform: translateY(-3px);
 }
 
 /* Interactive Document Container */
