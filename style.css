@@ -283,14 +283,33 @@ p {
     background-color: #ffffff; 
 }
 
+/* Update the grid layout to force a strict text/image split */
 .profile-container {
     display: grid;
-    /* This creates a 60/40 split between text and images */
-    grid-template-columns: 1.5fr 1fr; 
+    /* Changes to a 2-to-1 ratio: text takes up 66%, images 33% */
+    grid-template-columns: 2fr 1fr; 
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
     align-items: start;
+}
+
+/* Update the image sizing to strictly limit how large they can get */
+.profile-img {
+    width: 100%;
+    max-width: 300px; /* Forces the images to never exceed 300px wide */
+    margin-left: auto; /* Pushes them flush to the right edge */
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.profile-img:hover {
+    transform: translateY(-3px);
 }
 
 /* Typography for the Text Column */
@@ -499,10 +518,7 @@ footer {
     .hero-content h1 {
         font-size: 2.8rem;
     }
-.profile-container {
-        grid-template-columns: 1fr; /* Stacks everything into one single column */
-        gap: 40px;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -522,4 +538,14 @@ footer {
         gap: 10px;
         font-size: 0.95rem;
     }
+    .profile-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    
+    .profile-img {
+        margin-left: 0; /* Centers images on mobile */
+        margin: 0 auto; 
+    }
+}
 }
