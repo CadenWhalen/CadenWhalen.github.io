@@ -347,66 +347,53 @@ p {
     border: 1px solid var(--border-subtle);
 }
 
-/* Updated GT Institutional Footer Styling */
+/* Updated Single-Line Footer Architecture */
 footer {
     background-color: var(--primary-color);
     color: #cbd5e1;
-    padding: 3rem 8%;
+    padding: 2.5rem 8%;
     font-size: 0.95rem;
     border-top: 3px solid var(--accent-gold);
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items horizontally */
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
     text-align: center;
     width: 100%;
 }
 
-.footer-contact {
+.footer-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
     font-size: 1.05rem;
-    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
-.footer-contact a {
+.footer-row a {
     color: var(--buzz-gold);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-contact a:hover {
-    color: var(--text-light);
-}
-
-.footer-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.footer-links a {
-    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
+/* Style social icons distinctively with white */
+.footer-row a[target="_blank"] {
+    color: var(--text-light);
+}
+
+.footer-row a:hover,
+.footer-row a[target="_blank"]:hover {
     color: var(--buzz-gold);
 }
 
 .footer-divider {
     color: #cbd5e1;
-    opacity: 0.6;
+    opacity: 0.4;
     user-select: none;
 }
 
@@ -437,9 +424,8 @@ footer {
     .container {
         padding: 4rem 5%;
     }
-    .footer-contact, .footer-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
+    .footer-row {
+        gap: 10px;
+        font-size: 0.95rem;
     }
 }
