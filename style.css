@@ -596,4 +596,19 @@ footer {
         margin: 0 auto; 
     }
 }
+.content-wrapper {
+    padding: 5rem 15%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-wrapper h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.content-wrapper h2 {
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
 }
