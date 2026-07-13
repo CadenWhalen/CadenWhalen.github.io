@@ -653,4 +653,23 @@ footer {
     border-top: 1px solid #e2e8f0;
     margin-top: 4rem;
 }
+/* Mobile Responsive Fix for Project Cards */
+@media (max-width: 768px) {
+    .project-grid {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        padding: 0 20px;
+    }
+
+    .project-card {
+        width: 100%; /* Make card take up the full screen width */
+        margin-bottom: 20px;
+        padding: 15px; /* Add a little breathing room */
+        box-sizing: border-box; /* Ensures padding doesn't break the width */
+    }
+
+    .project-thumbnail {
+        height: 200px; /* Adjust height so it isn't too tall/short on phones */
+    }
+}
 }
