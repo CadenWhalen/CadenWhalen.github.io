@@ -19,7 +19,32 @@
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
+/* Create a responsive grid for the gallery */
+.gallery-grid {
+    display: grid;
+    /* Automatically creates columns that are at least 300px wide, 
+       but will expand to fill the space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Adds space between the pictures */
+    margin-top: 20px;
+}
 
+/* Constrain the images to fit perfectly inside their grid items */
+.gallery-item img {
+    max-width: 100%; /* Prevents the image from overflowing its container */
+    height: auto;    /* Maintains the correct aspect ratio */
+    display: block;  /* Removes the slight spacing browsers add under inline images */
+    border-radius: 8px; /* Optional: Adds a slight rounding to the corners for a cleaner look */
+    border: 1px solid #ddd; /* Optional: Adds a subtle border to separate schematics from the background */
+}
+
+/* Style the caption text under the images */
+.gallery-item .caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
 body {
     color: var(--text-dark);
     background-color: var(--bg-light);
