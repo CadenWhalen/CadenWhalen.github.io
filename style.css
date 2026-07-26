@@ -566,6 +566,10 @@ footer {
     .hero-content h1 {
         font-size: 2.8rem;
     }
+h3, h4 {
+    margin-top: 40px;    /* Adds space ABOVE the header */
+    margin-bottom: 15px; /* Adds space BELOW the header */
+}
 
 }
 
