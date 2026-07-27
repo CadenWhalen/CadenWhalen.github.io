@@ -98,7 +98,39 @@
             </div>
         </section>
     </main>
+<!-- Lightbox Overlay Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
 
+    <!-- Lightbox JavaScript -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const images = document.querySelectorAll('.gallery-item img');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Open lightbox when a gallery image is clicked
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        // Close lightbox when the close button is clicked
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Close lightbox when clicking anywhere on the dark background
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
     <footer>
         <div class="footer-container">
             <div class="footer-row">
