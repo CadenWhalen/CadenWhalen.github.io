@@ -51,7 +51,57 @@ body {
     line-height: 1.75;
     font-size: 1rem;
 }
+/* --- Lightbox Styles --- */
 
+/* Make the gallery images look clickable */
+.gallery-item img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add a slight pop effect when hovering over the images */
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+/* The dark background overlay */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures it sits on top of everything else */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+}
+
+/* The zoomed-in image */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* The close 'X' button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #f1c40f; /* YJSP Gold hover color */
+}
 /* Premium Sticky Header Styling */
 header {
     background-color: rgba(0, 48, 87, 0.98); /* Solid GT Navy baseline */
