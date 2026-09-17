@@ -22,45 +22,45 @@
 
     <main class="project-content">
         <h2>Project Overview</h2>
-        <p>Welcome to the showcase of my Digital Sampling lab project. The primary purpose of this lab was to convert mp3 waveforms into analog electrical signals, utilize a personal DAQ and microphone setup to record sound waves, and acquire digital data of time-varying signals[cite: 5]. Throughout this experiment, a LabJack T4 and the LabVIEW software were utilized to serve as the DAQ[cite: 5]. The project was broken down into two major sections: guided waveform analysis (Week 2) and a custom independent experiment (Week 3)[cite: 5].</p>
+        <p>Welcome to the showcase of my Digital Sampling lab project. The primary purpose of this lab was to convert mp3 waveforms into analog electrical signals, utilize a personal DAQ and microphone setup to record sound waves, and acquire digital data of time-varying signals. Throughout this experiment, a LabJack T4 and the LabVIEW software were utilized to serve as the DAQ. The project was broken down into two major sections: guided waveform analysis (Week 2) and a custom independent experiment (Week 3).</p>
 
         <section class="project-section">
             <h3>Week 2: Waveform Analysis & Signal Processing</h3>
-            <p>During the first phase of the project, I utilized the DAQ to analyze and identify waveforms from 11 different audio tracks, interpreting the power spectra of various complex waveforms[cite: 5]. Key findings from this phase included:</p>
+            <p>During the first phase of the project, I utilized the DAQ to analyze and identify waveforms from 11 different audio tracks, interpreting the power spectra of various complex waveforms. Key findings from this phase included:</p>
             <ul>
-                <li><strong>Complex Waveforms:</strong> When evaluating a complex waveform with a time history frequency of 200 Hz and 1000 Hz, the power spectrum showed frequencies at 900 Hz and 1100 Hz, driven by the relationship: sin(2&pi;(900)t) + sin(2&pi;(1100)t) = 2 sin(2&pi;(1000)t)cos(2&pi;(200)t)[cite: 5].</li>
-                <li><strong>Quantization Error:</strong> When the amplifier was lowered, the recorded square wave lost its shape and tended to act more like a single sine wave[cite: 5].</li>
-                <li><strong>Sampling and Record Length:</strong> Adjusting the record length changed the number of distinct points on the power spectrum, while adjusting the sampling rate changed the frequency resolution[cite: 5].</li>
-                <li><strong>Aliasing & Filters:</strong> At low sampling rates, power spectrum readings became significantly skewed to the left[cite: 5]. Additionally, the implementation of a low pass filter successfully filtered out higher frequencies while keeping lower frequencies the same via a cutoff frequency[cite: 5].</li>
+                <li><strong>Complex Waveforms:</strong> When evaluating a complex waveform with a time history frequency of 200 Hz and 1000 Hz, the power spectrum showed frequencies at 900 Hz and 1100 Hz, driven by the relationship: sin(2&pi;(900)t) + sin(2&pi;(1100)t) = 2 sin(2&pi;(1000)t)cos(2&pi;(200)t).</li>
+                <li><strong>Quantization Error:</strong> When the amplifier was lowered, the recorded square wave lost its shape and tended to act more like a single sine wave.</li>
+                <li><strong>Sampling and Record Length:</strong> Adjusting the record length changed the number of distinct points on the power spectrum, while adjusting the sampling rate changed the frequency resolution.</li>
+                <li><strong>Aliasing & Filters:</strong> At low sampling rates, power spectrum readings became significantly skewed to the left. Additionally, the implementation of a low pass filter successfully filtered out higher frequencies while keeping lower frequencies the same via a cutoff frequency.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Week 3: Independent Audio Acquisition Experiment</h3>
-            <p>The motivation for my independent experiment stemmed from playing the trombone in high school; I noticed that online recordings of my playing generally sounded different than how the instrument sounded in real life[cite: 5]. The purpose of this experiment was to analyze the differences in power spectra between music notes recorded directly by an audio jack (representing a digital signal) versus a microphone (representing the real-life sound wave)[cite: 5].</p>
+            <p>The motivation for my independent experiment stemmed from playing the trombone in high school; I noticed that online recordings of my playing generally sounded different than how the instrument sounded in real life. The purpose of this experiment was to analyze the differences in power spectra between music notes recorded directly by an audio jack (representing a digital signal) versus a microphone (representing the real-life sound wave).</p>
             
             <h4>Experimental Setup</h4>
             <ul>
-                <li>I hypothesized that an audio jack recording would produce a significantly more compressed power spectrum compared to a microphone recording[cite: 5].</li>
-                <li>The hardware setup utilized a LabJack T4 DAQ, a tone generator, a microphone, and a 3.5mm audio breakout adapter with jumper wires[cite: 5].</li>
-                <li>Data was captured for every note across the C Major, F Major, and Bb Major scales to ensure accuracy[cite: 5].</li>
+                <li>I hypothesized that an audio jack recording would produce a significantly more compressed power spectrum compared to a microphone recording.</li>
+                <li>The hardware setup utilized a LabJack T4 DAQ, a tone generator, a microphone, and a 3.5mm audio breakout adapter with jumper wires.</li>
+                <li>Data was captured for every note across the C Major, F Major, and Bb Major scales to ensure accuracy.</li>
             </ul>
 
             <h4>Key Findings & Conclusions</h4>
             <ul>
-                <li><strong>Harmonic Overtones:</strong> The microphone successfully captured harmonic overtones—slight reverberations caused by sounds bouncing in a physical room—while the audio jack completely overlooked them[cite: 5].</li>
-                <li><strong>Digital Isolation:</strong> The audio jack accurately recorded the fundamental frequency but isolated the signal into a near-perfect sine wave, lacking the complexity of physical sound[cite: 5].</li>
-                <li><strong>White Noise Impact:</strong> White noise was responsible for a significant difference in relative power levels between the two recording methods[cite: 5]. The audio jack data was virtually untouched by white noise, whereas the microphone was heavily impacted by picking up ambient sounds in the room, resulting in much lower relative power levels for the peak frequencies on the microphone[cite: 5].</li>
+                <li><strong>Harmonic Overtones:</strong> The microphone successfully captured harmonic overtones—slight reverberations caused by sounds bouncing in a physical room—while the audio jack completely overlooked them.</li>
+                <li><strong>Digital Isolation:</strong> The audio jack accurately recorded the fundamental frequency but isolated the signal into a near-perfect sine wave, lacking the complexity of physical sound.</li>
+                <li><strong>White Noise Impact:</strong> White noise was responsible for a significant difference in relative power levels between the two recording methods. The audio jack data was virtually untouched by white noise, whereas the microphone was heavily impacted by picking up ambient sounds in the room, resulting in much lower relative power levels for the peak frequencies on the microphone.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Errors & Uncertainties</h3>
-            <p>A few important errors could have skewed the experimental results, which were cataloged during the data analysis phase[cite: 5]:</p>
+            <p>A few important errors could have skewed the experimental results, which were cataloged during the data analysis phase:</p>
             <ul>
-                <li><strong>Digital System Error:</strong> In all data gathered from the microphone, there was a significant and anomalous spike in the power spectrum at exactly 0 Hz[cite: 5].</li>
-                <li><strong>Audio Output Limitations:</strong> The laptop speaker used to output the tone generator may not have been able to perfectly replicate the sounds, and the tone generator struggled to differentiate between highly similar notes, such as D and Eb[cite: 5].</li>
-                <li><strong>Human Error:</strong> Slight measurement errors may have occurred when manually recording specific frequency peaks and power levels from the data plots[cite: 5].</li>
+                <li><strong>Digital System Error:</strong> In all data gathered from the microphone, there was a significant and anomalous spike in the power spectrum at exactly 0 Hz.</li>
+                <li><strong>Audio Output Limitations:</strong> The laptop speaker used to output the tone generator may not have been able to perfectly replicate the sounds, and the tone generator struggled to differentiate between highly similar notes, such as D and Eb.</li>
+                <li><strong>Human Error:</strong> Slight measurement errors may have occurred when manually recording specific frequency peaks and power levels from the data plots.</li>
             </ul>
         </section>
     </main>
