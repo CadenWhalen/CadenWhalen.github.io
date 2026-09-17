@@ -22,47 +22,47 @@
 
     <main class="project-content">
         <h2>Project Overview</h2>
-        <p>Welcome to the showcase of my Dynamics Systems Response Lab[cite: 4]. In this project, I measured and analyzed the response of a dynamical system over time[cite: 4]. The primary goal was to utilize raw data to estimate material characteristics, such as spring constants and damping coefficients, and to derive the governing equations of motion for the system[cite: 4]. The experiment tested four main configurations—comparing linear versus non-linear responses and zero-block versus four-block masses—along with one supplementary non-linear configuration[cite: 4].</p>
+        <p>Welcome to the showcase of my Dynamics Systems Response Lab. In this project, I measured and analyzed the response of a dynamical system over time. The primary goal was to utilize raw data to estimate material characteristics, such as spring constants and damping coefficients, and to derive the governing equations of motion for the system. The experiment tested four main configurations—comparing linear versus non-linear responses and zero-block versus four-block masses—along with one supplementary non-linear configuration.</p>
 
         <section class="project-section">
             <h3>Testing Setup & Methodology</h3>
-            <p>Data was gathered using a combination of manual component measurements and computer-aided data acquisition[cite: 4]. The physical setup was carefully constructed to minimize external errors:</p>
+            <p>Data was gathered using a combination of manual component measurements and computer-aided data acquisition. The physical setup was carefully constructed to minimize external errors:</p>
             <ul>
-                <li>The experimental setup utilized a 1-DOF sliding cart system equipped with an embedded linear optical shaft encoder[cite: 4].</li>
-                <li>The optical encoder measured instantaneous displacement by sensing alternating light intensities via LEDs and photodetectors[cite: 4].</li>
-                <li>The sliding mechanism was oriented 45 degrees from the edge of the table to minimize the impact of external forces or accidental bumps[cite: 4].</li>
-                <li>Individual component masses were measured with a digital scale, and the cart was hung vertically to ensure its mass was isolated from the broader sliding mechanism[cite: 4].</li>
+                <li>The experimental setup utilized a 1-DOF sliding cart system equipped with an embedded linear optical shaft encoder.</li>
+                <li>The optical encoder measured instantaneous displacement by sensing alternating light intensities via LEDs and photodetectors.</li>
+                <li>The sliding mechanism was oriented 45 degrees from the edge of the table to minimize the impact of external forces or accidental bumps.</li>
+                <li>Individual component masses were measured with a digital scale, and the cart was hung vertically to ensure its mass was isolated from the broader sliding mechanism.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Linear Data Analysis & Modeling</h3>
-            <p>For the linear system response, the initial spring constant ($k_{1}$) and damping coefficient ($b$) were estimated using simple harmonic and damped oscillation principles[cite: 4]. These values were later refined using trial and error in MATLAB until the analytical model overlapped with the raw experimental data[cite: 4].</p>
+            <p>For the linear system response, the initial spring constant (k<sub>1</sub>) and damping coefficient (b) were estimated using simple harmonic and damped oscillation principles. These values were later refined using trial and error in MATLAB until the analytical model overlapped with the raw experimental data.</p>
             <ul>
-                <li>The time period of oscillation was used to estimate the spring constant via the equation $k_{1}=m(\frac{2\pi}{T})^{2}$[cite: 4].</li>
-                <li>The damping coefficient was estimated by comparing successive peak displacements using $b=\frac{2m}{T}ln(\frac{x_{1}}{x_{2}})$[cite: 4].</li>
-                <li>The linear equation of motion was derived and represented in the form $m\dot{x}+b\dot{x}+k_{1}x=0$[cite: 4].</li>
+                <li>The time period of oscillation was used to estimate the spring constant via the equation k<sub>1</sub> = m(2&pi;/T)<sup>2</sup>.</li>
+                <li>The damping coefficient was estimated by comparing successive peak displacements using b = (2m/T)ln(x<sub>1</sub>/x<sub>2</sub>).</li>
+                <li>The linear equation of motion was derived and represented in the form mẍ + bẋ + k<sub>1</sub>x = 0.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Non-Linear System Analysis</h3>
-            <p>The non-linear configurations introduced a second spring (Spring 4) acting as a damper, which disproportionately absorbed kinetic energy and only engaged after the cart passed a specific offset distance[cite: 4].</p>
+            <p>The non-linear configurations introduced a second spring (Spring 4) acting as a damper, which disproportionately absorbed kinetic energy and only engaged after the cart passed a specific offset distance.</p>
             <ul>
-                <li>Because Spring 4 did not act on the cart for the entire period of oscillation, a Heaviside function, $H(x-x_{c})$, was implemented to mathematically model the step-like engagement of the second spring[cite: 4].</li>
-                <li>The non-linear equation of motion was formulated as $m\dot{x}+b\dot{x}+k_{1}x+k_{2}(x-x_{c})H(x-x_{c})=0$[cite: 4].</li>
-                <li>The effective spring stiffness of the non-linear system dynamically transitioned from $k_{1}$ to $k_{1}+k_{2}$ depending on whether the cart was in contact with the damper[cite: 4].</li>
+                <li>Because Spring 4 did not act on the cart for the entire period of oscillation, a Heaviside function, H(x - x<sub>c</sub>), was implemented to mathematically model the step-like engagement of the second spring.</li>
+                <li>The non-linear equation of motion was formulated as mẍ + bẋ + k<sub>1</sub>x + k<sub>2</sub>(x - x<sub>c</sub>)H(x - x<sub>c</sub>) = 0.</li>
+                <li>The effective spring stiffness of the non-linear system dynamically transitioned from k<sub>1</sub> to k<sub>1</sub> + k<sub>2</sub> depending on whether the cart was in contact with the damper.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Key Findings & Results</h3>
-            <p>Through experimental testing and iterative MATLAB adjustments, the actual system parameters for the dynamics models were successfully identified[cite: 4].</p>
+            <p>Through experimental testing and iterative MATLAB adjustments, the actual system parameters for the dynamics models were successfully identified.</p>
             <ul>
-                <li>The final spring constant for Spring 1 ($k_{1}$) was determined to be 81.77 N/m[cite: 4].</li>
-                <li>The actual damping coefficient ($b$) for the system was calculated to be 0.1668 Ns/m[cite: 4].</li>
-                <li>The second spring constant ($k_{2}$) in the non-linear configuration was 253.0 N/m, with an operational offset distance of 0.0244 m[cite: 4].</li>
-                <li>The total mass of the zero-blocks configuration was 660.11 g, while the addition of the four weight blocks increased the total system mass to 1853.48 g[cite: 4].</li>
+                <li>The final spring constant for Spring 1 (k<sub>1</sub>) was determined to be 81.77 N/m.</li>
+                <li>The actual damping coefficient (b) for the system was calculated to be 0.1668 Ns/m.</li>
+                <li>The second spring constant (k<sub>2</sub>) in the non-linear configuration was 253.0 N/m, with an operational offset distance of 0.0244 m.</li>
+                <li>The total mass of the zero-blocks configuration was 660.11 g, while the addition of the four weight blocks increased the total system mass to 1853.48 g.</li>
             </ul>
         </section>
 
@@ -71,15 +71,15 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="Figure1_LinearZero.png" alt="Raw data for linear response of zero block configuration">
-                    <p class="caption">Linear Response: Zero Block Configuration[cite: 4]</p>
+                    <p class="caption">Linear Response: Zero Block Configuration</p>
                 </div>
                 <div class="gallery-item">
                     <img src="Figure6_LinearModel.png" alt="Linear experimental response and analytical solution">
-                    <p class="caption">Linear Experimental Data vs. Analytical Solution[cite: 4]</p>
+                    <p class="caption">Linear Experimental Data vs. Analytical Solution</p>
                 </div>
                 <div class="gallery-item">
                     <img src="Figure8_NonLinearModel.png" alt="Non-linear experimental response and analytical solution">
-                    <p class="caption">Non-Linear Data vs. Analytical Solution (Heaviside Model)[cite: 4]</p>
+                    <p class="caption">Non-Linear Data vs. Analytical Solution (Heaviside Model)</p>
                 </div>
             </div>
         </section>
