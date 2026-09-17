@@ -22,33 +22,33 @@
 
     <main class="project-content">
         <h2>Project Overview</h2>
-        <p>Welcome to the showcase of my Tensile Testing lab project. In this project, I measured numerous characteristics of metals by analyzing their physical dimensions before and after testing, as well as by interpreting raw data files[cite: 2]. The primary objective was to determine various material properties, such as ultimate tensile stress, fracture strain, and strength coefficient, and to ultimately discover the true identity of a mystery specimen[cite: 2].</p>
+        <p>Welcome to the showcase of my Tensile Testing lab project. In this project, I measured numerous characteristics of metals by analyzing their physical dimensions before and after testing, as well as by interpreting raw data files. The primary objective was to determine various material properties, such as ultimate tensile stress, fracture strain, and strength coefficient, and to ultimately discover the true identity of a mystery specimen.</p>
 
         <section class="project-section">
             <h3>Testing Methodology</h3>
-            <p>To ensure accuracy and safety, this testing was conducted in a controlled environment with a protective glass separating our group from the machinery[cite: 2]. We utilized an Instron 5982 load frame to deliver axial force, a pre-wired strain gauge to measure material strain, and an extensometer to record the relative displacement of the reduced section over time[cite: 2]. We recorded critical dimensions for both specimens, including initial lengths, width and thickness of the reduced section, as well as the width and thickness of both the uniformly deformed and fractured regions after failure[cite: 2].</p>
+            <p>To ensure accuracy and safety, this testing was conducted in a controlled environment with a protective glass separating our group from the machinery. We utilized an Instron 5982 load frame to deliver axial force, a pre-wired strain gauge to measure material strain, and an extensometer to record the relative displacement of the reduced section over time. We recorded critical dimensions for both specimens, including initial lengths, width and thickness of the reduced section, as well as the width and thickness of both the uniformly deformed and fractured regions after failure.</p>
         </section>
 
         <section class="project-section">
             <h3>Data Reduction & Mathematical Modeling</h3>
-            <p>The data reduction section of this project involved four primary calculations to extract material characteristics from the raw testing data[cite: 2]:</p>
+            <p>The data reduction section of this project involved four primary calculations to extract material characteristics from the raw testing data:</p>
             <ul>
-                <li><strong>Engineering Stress:</strong> We computed engineering stress using the force calculated by the load cell and the initial cross-sectional area of the reduced section[cite: 2]. This relationship is defined as $\sigma=\frac{P}{A_{0}}$[cite: 2].</li>
-                <li><strong>Young's Modulus:</strong> By isolating the initial linear elastic section of the stress-strain curve, we estimated Young's Modulus using the linear approximation $\sigma=E\epsilon$, which represents the slope of the curve[cite: 2].</li>
-                <li><strong>Material Characteristics:</strong> Using the load and strain data, we calculated various parameters, including engineering ultimate tensile stress, true ultimate tensile stress ($UTS_{true}=\sigma_{max}(1+\epsilon_{max})$), and true fracture stress ($\sigma_{fract,true}=\frac{P_{f}}{A_{f}}$)[cite: 2].</li>
-                <li><strong>Strain Hardening & Strength Coefficient:</strong> In the plastic region, ductile metals satisfy the equation $\sigma_{T}=K\epsilon_{T}^{n}$[cite: 2]. By taking the natural log of both sides, $ln(\sigma_{T})=ln(K)+n~ln(\epsilon_{T})$, we plotted the data to find the strain hardening index ($n$) as the slope and the natural log of the strength coefficient ($K$) as the y-intercept[cite: 2].</li>
+                <li><strong>Engineering Stress:</strong> We computed engineering stress using the force calculated by the load cell and the initial cross-sectional area of the reduced section. This relationship is defined as $\sigma=\frac{P}{A_{0}}$.</li>
+                <li><strong>Young's Modulus:</strong> By isolating the initial linear elastic section of the stress-strain curve, we estimated Young's Modulus using the linear approximation $\sigma=E\epsilon$, which represents the slope of the curve.</li>
+                <li><strong>Material Characteristics:</strong> Using the load and strain data, we calculated various parameters, including engineering ultimate tensile stress, true ultimate tensile stress ($UTS_{true}=\sigma_{max}(1+\epsilon_{max})$), and true fracture stress ($\sigma_{fract,true}=\frac{P_{f}}{A_{f}}$).</li>
+                <li><strong>Strain Hardening & Strength Coefficient:</strong> In the plastic region, ductile metals satisfy the equation $\sigma_{T}=K\epsilon_{T}^{n}$. By taking the natural log of both sides, $ln(\sigma_{T})=ln(K)+n~ln(\epsilon_{T})$, we plotted the data to find the strain hardening index ($n$) as the slope and the natural log of the strength coefficient ($K$) as the y-intercept.</li>
             </ul>
         </section>
 
         <section class="project-section">
             <h3>Results and Material Identification</h3>
-            <p>The testing evaluated two specimens: Al 2024-T3 aluminum and an unknown mystery metal[cite: 2]. The Al 2024-T3 specimen yielded an estimated Young's Modulus of 71.96 GPa, a strain hardening index of 0.1108, and a strength coefficient of 619.55 GPa[cite: 2].</p>
-            <p>The mystery specimen was successfully identified as 260 Brass[cite: 2]. This identification was justified by several key findings:</p>
+            <p>The testing evaluated two specimens: Al 2024-T3 aluminum and an unknown mystery metal. The Al 2024-T3 specimen yielded an estimated Young's Modulus of 71.96 GPa, a strain hardening index of 0.1108, and a strength coefficient of 619.55 GPa.</p>
+            <p>The mystery specimen was successfully identified as 260 Brass. This identification was justified by several key findings:</p>
             <ul>
-                <li>The estimated Young's Modulus of the mystery material was 103.74 GPa, which closely aligns with the actual 110.32 GPa (16,000 ksi) value of 260 Brass[cite: 2].</li>
-                <li>The specimen exhibited considerably high ductility and experienced significant elongation before failure, characteristic of 260 Brass[cite: 2].</li>
-                <li>The material's high tolerance to plastic deformation ruled out alternatives like 353 Brass, which contains lead that lowers ductility[cite: 2].</li>
-                <li>Qualitatively, the appearance and feel of the specimen strongly resembled brass[cite: 2].</li>
+                <li>The estimated Young's Modulus of the mystery material was 103.74 GPa, which closely aligns with the actual 110.32 GPa (16,000 ksi) value of 260 Brass.</li>
+                <li>The specimen exhibited considerably high ductility and experienced significant elongation before failure, characteristic of 260 Brass.</li>
+                <li>The material's high tolerance to plastic deformation ruled out alternatives like 353 Brass, which contains lead that lowers ductility.</li>
+                <li>Qualitatively, the appearance and feel of the specimen strongly resembled brass.</li>
             </ul>
         </section>
 
