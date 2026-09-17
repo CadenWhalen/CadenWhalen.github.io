@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ECE 1100 Discovery Project | Caden Whalen</title>
+    <title>Digital Sampling Lab | Caden Whalen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="project-page">
@@ -16,89 +16,56 @@
     </header>
 
     <section class="project-hero">
-        <h1>ECE 1100 Discovery Project</h1>
-        <p class="status-badge">Status: Work In Progress</p>
+        <h1>Digital Sampling & Audio Analysis</h1>
+        <p class="status-badge">Status: Complete</p>
     </section>
 
     <main class="project-content">
         <h2>Project Overview</h2>
-        <p>Welcome to the up-to-date showcase of my ECE 1100 Discovery Project. In this project, I collaborated with the Yellow Jacket Space Program to design, develop, and implement a rapid test board for diagnosing and addressing a faulty sensor. Below is a detailed overview of the skills gained as well as the project's conceptualization, design process, development, technical challenges, progress, and future plans.</p>
+        <p>Welcome to the showcase of my Digital Sampling lab project. The primary purpose of this lab was to convert mp3 waveforms into analog electrical signals, utilize a personal DAQ and microphone setup to record sound waves, and acquire digital data of time-varying signals[cite: 5]. Throughout this experiment, a LabJack T4 and the LabVIEW software were utilized to serve as the DAQ[cite: 5]. The project was broken down into two major sections: guided waveform analysis (Week 2) and a custom independent experiment (Week 3)[cite: 5].</p>
 
         <section class="project-section">
-            <h3>The Main Idea</h3>
-            <p>At the start of the summer semester, I was tasked with designing and developing a rapid test board for the Yellow Jacket Space Program. My primary responsibility was to translate a set of system requirements into electrical schematics and a printed circuit board (PCB) layout before assembling the corresponding test board and any necessary wiring harnesses.</p>
-            <p>The project consisted of five primary design requirements. First, the board had to accept a 24 V input from an external power supply while incorporating electrostatic discharge (ESD) protection, overvoltage and undervoltage protection, appropriate power filtering, and voltage regulation. This voltage regulation aimed to provide stable 5 V and 3.3 V for the various onboard components. Second, the design required the use of a STM32H573RIT6 microcontroller as the primary processor, including a JTAG programming interface and an ADS114S06 analog-to-digital converter (ADC). Third, I was responsible for selecting one of the following sensor types for testing: a resistance temperature detector (RTD), platinum temperature (PT) sensor, thermocouple (TC), differential pressure sensor, or solenoid valve. Fourth, the board had to implement the Serial Peripheral Interface (SPI) protocol to enable communication between the microcontroller and the ADC. Finally, the design needed to be mechanically and electrically compatible with the existing Yellow Jacket Space Program avionics system, which could require custom mounting hardware and wiring harnesses.</p>
+            <h3>Week 2: Waveform Analysis & Signal Processing</h3>
+            <p>During the first phase of the project, I utilized the DAQ to analyze and identify waveforms from 11 different audio tracks, interpreting the power spectra of various complex waveforms[cite: 5]. Key findings from this phase included:</p>
+            <ul>
+                <li><strong>Complex Waveforms:</strong> When evaluating a complex waveform with a time history frequency of 200 Hz and 1000 Hz, the power spectrum showed frequencies at 900 Hz and 1100 Hz, driven by the relationship: sin(2&pi;(900)t) + sin(2&pi;(1100)t) = 2 sin(2&pi;(1000)t)cos(2&pi;(200)t)[cite: 5].</li>
+                <li><strong>Quantization Error:</strong> When the amplifier was lowered, the recorded square wave lost its shape and tended to act more like a single sine wave[cite: 5].</li>
+                <li><strong>Sampling and Record Length:</strong> Adjusting the record length changed the number of distinct points on the power spectrum, while adjusting the sampling rate changed the frequency resolution[cite: 5].</li>
+                <li><strong>Aliasing & Filters:</strong> At low sampling rates, power spectrum readings became significantly skewed to the left[cite: 5]. Additionally, the implementation of a low pass filter successfully filtered out higher frequencies while keeping lower frequencies the same via a cutoff frequency[cite: 5].</li>
+            </ul>
         </section>
 
         <section class="project-section">
-            <h3>Project Progress</h3>
-            <p>As of the Discovery Showcase, I was able to successfully complete four of the five design requirements. I first fully implemented the power system, making sure to allow the board to accept a 24 V input while also providing regulated 5 V and 3.3 V power rails through the integration of a MAX17503 step-down converter and a TPS7A2033 low-dropout (LDO) regulator. The power system design also incorporates essential protection requirements, including undervoltage lockout (UVLO), electrostatic discharge (ESD) protection, and input/output filtering to improve system reliability.</p>
-            <p>After designing a functional power system, I was able to successfully integrate the major electronic devices, including an STM32H573RIT6 microcontroller as the primary processor, a standard JTAG programming interface for debugging and firmware development, and an ADS114S06 analog-to-digital converter (ADC) for sensor data acquisition. During this step, I decided to center my test board design to support a resistance temperature detector (RTD), with the sensor inputs routed directly into the ADC. Finally, the Serial Peripheral Interface (SPI) protocol enabled communication between the microcontroller and ADC.</p>
-        </section>
-
-        <section class="project-section">
-            <h3>Successes and Failures</h3>
-            <p>The following section represents the various successes and failures that I recorded throughout the development of the rapid test board:</p>
+            <h3>Week 3: Independent Audio Acquisition Experiment</h3>
+            <p>The motivation for my independent experiment stemmed from playing the trombone in high school; I noticed that online recordings of my playing generally sounded different than how the instrument sounded in real life[cite: 5]. The purpose of this experiment was to analyze the differences in power spectra between music notes recorded directly by an audio jack (representing a digital signal) versus a microphone (representing the real-life sound wave)[cite: 5].</p>
             
-            <h4>Successes</h4>
+            <h4>Experimental Setup</h4>
             <ul>
-                <li>Properly set up Altium and connected to the YJSP network</li>
-                <li>Learned how to navigate and use Altium to create designs</li>
-                <li>Completed a high-level block diagram of the rapid test board</li>
-                <li>Completed the digital schematic diagram of each subsystem of the rapid test board</li>
-                <li>Fully integrated the subsystems together with proper functionality</li>
-                <li>Set up and updated the ECE 1100 Discovery Project Showcase throughout the course of the semester</li>
+                <li>I hypothesized that an audio jack recording would produce a significantly more compressed power spectrum compared to a microphone recording[cite: 5].</li>
+                <li>The hardware setup utilized a LabJack T4 DAQ, a tone generator, a microphone, and a 3.5mm audio breakout adapter with jumper wires[cite: 5].</li>
+                <li>Data was captured for every note across the C Major, F Major, and Bb Major scales to ensure accuracy[cite: 5].</li>
             </ul>
 
-            <h4>Failures</h4>
+            <h4>Key Findings & Conclusions</h4>
             <ul>
-                <li>Difficulty following the strict deadlines I laid out for myself at the beginning of the semester</li>
-                <li>Did not properly communicate with YJSP mentors throughout the project</li>
-                <li>Considerably challenging to learn Altium through websites and videos</li>
-                <li>Initial subsystem integrated design had to be completely redesigned to match requirements</li>
-                <li>Significantly overestimated the 3D circuit board design process</li>
+                <li><strong>Harmonic Overtones:</strong> The microphone successfully captured harmonic overtones—slight reverberations caused by sounds bouncing in a physical room—while the audio jack completely overlooked them[cite: 5].</li>
+                <li><strong>Digital Isolation:</strong> The audio jack accurately recorded the fundamental frequency but isolated the signal into a near-perfect sine wave, lacking the complexity of physical sound[cite: 5].</li>
+                <li><strong>White Noise Impact:</strong> White noise was responsible for a significant difference in relative power levels between the two recording methods[cite: 5]. The audio jack data was virtually untouched by white noise, whereas the microphone was heavily impacted by picking up ambient sounds in the room, resulting in much lower relative power levels for the peak frequencies on the microphone[cite: 5].</li>
             </ul>
         </section>
 
         <section class="project-section">
-            <h3>ECE Skills Gained</h3>
-            <p>Working on this project has enabled me to learn and expand upon many new skills outside of class. The main avionics skills that I developed over the course of the summer semester can be found below:</p>
+            <h3>Errors & Uncertainties</h3>
+            <p>A few important errors could have skewed the experimental results, which were cataloged during the data analysis phase[cite: 5]:</p>
             <ul>
-                <li>PCB layout design</li>
-                <li>Conversion from analog signal to digital format</li>
-                <li>Creation of high-level block diagrams</li>
-                <li>Implementation of circuit technology skills</li>
-                <li>Design for the application of avionics integration</li>
-                <li>Utilization of serial peripheral interface</li>
-                <li>Implementation of electrostatic discharge & overvoltage/undervoltage protection</li>
-                <li>Inclusion of proper filtering</li>
+                <li><strong>Digital System Error:</strong> In all data gathered from the microphone, there was a significant and anomalous spike in the power spectrum at exactly 0 Hz[cite: 5].</li>
+                <li><strong>Audio Output Limitations:</strong> The laptop speaker used to output the tone generator may not have been able to perfectly replicate the sounds, and the tone generator struggled to differentiate between highly similar notes, such as D and Eb[cite: 5].</li>
+                <li><strong>Human Error:</strong> Slight measurement errors may have occurred when manually recording specific frequency peaks and power levels from the data plots[cite: 5].</li>
             </ul>
-        </section>
-
-        <section class="project-section">
-            <h3>Final Thoughts & Future Plans</h3>
-            <p>Looking back, I am satisfied with the progress that I was able to make this semester. I knew this project would be ambitious at the start of the semester, but I was able to get a considerable portion of it accomplished while adhering to all the requirements. Currently, I am still in the process of converting digital schematics into a 3D circuit rendering. My immediate next steps are to finalize the circuit design, confirm the design with YJSP, order the corresponding components, assemble the rapid test board, and pass testing. Overall, there are many steps left to complete for this project, but I believe that the most challenging sections have been completed. I am happy to have learned so much this summer semester, and I cannot wait to finish this project early in the fall.</p>
-        </section>
-
-        <section class="project-gallery">
-            <h3>Project Gallery</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="Testboard1.png" alt="Discovery Project Setup - Phase 1">
-                    <p class="caption">Main Processing Schematic</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="Testboard2.png" alt="Discovery Project Testing - Phase 2">
-                    <p class="caption">Analog to Digital Converter Schematic</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="Testboard3.png" alt="Discovery Project Final Build">
-                    <p class="caption">Power System Schematic</p>
-                </div>
-            </div>
         </section>
     </main>
-<!-- Lightbox Overlay Container -->
+
+    <!-- Lightbox Overlay Container -->
     <div id="lightbox" class="lightbox">
         <span class="close-btn">&times;</span>
         <img id="lightbox-img" src="" alt="Zoomed Image">
@@ -111,7 +78,6 @@
         const images = document.querySelectorAll('.gallery-item img');
         const closeBtn = document.querySelector('.close-btn');
 
-        // Open lightbox when a gallery image is clicked
         images.forEach(img => {
             img.addEventListener('click', () => {
                 lightbox.style.display = 'flex';
@@ -119,12 +85,10 @@
             });
         });
 
-        // Close lightbox when the close button is clicked
         closeBtn.addEventListener('click', () => {
             lightbox.style.display = 'none';
         });
 
-        // Close lightbox when clicking anywhere on the dark background
         lightbox.addEventListener('click', (e) => {
             if (e.target !== lightboxImg) {
                 lightbox.style.display = 'none';
